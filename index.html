@@ -7,13 +7,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
     <style>
+        .hidden-text { display: none; }
         .scroll-smooth { scroll-behavior: smooth; }
-        /* Ensures the container is a perfect square for 1080x1080 content */
-        .square-container {
-            aspect-ratio: 1 / 1;
-            width: 100%;
-            overflow: hidden;
-        }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-900 font-sans scroll-smooth">
@@ -21,15 +16,16 @@
     <!-- Navigation -->
     <nav class="sticky top-0 bg-white/90 backdrop-blur-md z-50 border-b">
         <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-            <span class="text-xl font-bold text-green-700 tracking-tighter uppercase">Patrick Amaibi</span>
+            <span class="text-xl font-bold text-green-700 tracking-tighter">PATRICK AMAIBI</span>
             <div class="space-x-6 hidden md:flex items-center">
                 <a href="#about" class="hover:text-green-600 font-medium transition">About</a>
                 <a href="#design" class="hover:text-green-600 font-medium transition">Portfolio</a>
                 <a href="#experience" class="hover:text-green-600 font-medium transition">Journey</a>
                 
+                <!-- Social Links in Nav -->
                 <div class="flex items-center border-l pl-6 gap-4">
-                    <a href="https://x.com/patrickamaibi" target="_blank" class="text-slate-500 hover:text-black transition text-xl"><i class="fa-brands fa-x-twitter"></i></a>
-                    <a href="https://www.linkedin.com/in/patrickamaibi/" target="_blank" class="text-slate-500 hover:text-blue-600 transition text-xl"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://x.com/patrickamaibi" target="_blank" class="text-slate-500 hover:text-black transition text-lg"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://www.linkedin.com/in/patrickamaibi/" target="_blank" class="text-slate-500 hover:text-blue-600 transition text-lg"><i class="fab fa-linkedin"></i></a>
                     <a href="mailto:amaibipatrick@gmail.com" class="bg-green-700 text-white px-5 py-2 rounded-full text-sm font-bold hover:bg-green-800 transition shadow-sm">Email Me</a>
                 </div>
             </div>
@@ -42,61 +38,52 @@
             Advancing <span class="text-green-600">Climate Justice</span> through Tech & Design
         </h1>
         
+        <!-- About Me with Read More -->
         <div class="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-            <p id="about-text-preview" class="inline">
+            <p id="about-text-preview">
                 I am a tech-savvy environmental and climate justice advocate with a background in Environmental Engineering and strong experience in youth-led and community-driven initiatives...
             </p>
-            <span id="about-text-full" class="hidden text-slate-600">
+            <span id="about-text-full" class="hidden">
                 I work at the intersection of grassroots engagement, advocacy, and technology, using tools like GIS and data analysis to support sustainable development. I am passionate about amplifying community voices and driving inclusive climate action at local, national, and global levels.
             </span>
             <button onclick="toggleAbout()" id="read-more-btn" class="mt-4 text-green-700 font-bold hover:underline block mx-auto">Read More</button>
         </div>
     </header>
 
-    <!-- Design Portfolio Section (1080x1080 Squares) -->
+    <!-- Design Portfolio Section -->
     <section id="design" class="bg-white py-20">
         <div class="max-w-6xl mx-auto px-6">
             <div class="mb-12">
                 <h2 class="text-3xl font-bold text-slate-900 italic">Top Graphic Design Jobs</h2>
-                <p class="text-slate-500 mt-2 font-medium uppercase tracking-widest text-xs">Featured Creative Projects (1080x1080)</p>
                 <div class="h-1 w-20 bg-green-600 mt-2"></div>
             </div>
             
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Project 1 -->
+            <div class="grid md:grid-cols-3 gap-10">
+                <!-- Design Job 1 -->
                 <div class="group">
-                    <div class="square-container bg-slate-100 rounded-xl mb-4 shadow-sm border border-slate-200 relative">
-                        <div class="absolute inset-0 flex items-center justify-center text-slate-400 text-xs p-4 text-center opacity-50">
-                            [CLIMATEJ.PNG 1080x1080]
-                        </div>
-                        <img src="CLIMATEJ.PNG" alt="Climate Justice Campaign" class="w-full h-full object-cover relative z-10 group-hover:scale-110 transition-transform duration-500">
+                    <div class="bg-slate-100 aspect-square rounded-xl mb-4 overflow-hidden shadow-sm group-hover:shadow-xl transition-all border border-slate-200">
+                        <img src="climatej.PNG" alt="Climate Justice Campaign" class="object-cover w-full h-full group-hover:scale-105 transition-transform">
                     </div>
                     <h3 class="font-bold text-lg">Climate Justice Campaign</h3>
-                    <p class="text-sm text-slate-500 font-medium italic">Environmental Advocacy</p>
+                    <p class="text-sm text-slate-500 font-medium italic">Environmental Advocacy • Digital Media</p>
                 </div>
 
-                <!-- Project 2 -->
+                <!-- Design Job 2 -->
                 <div class="group">
-                    <div class="square-container bg-slate-100 rounded-xl mb-4 shadow-sm border border-slate-200 relative">
-                        <div class="absolute inset-0 flex items-center justify-center text-slate-400 text-xs p-4 text-center opacity-50">
-                            [AYCAP.PNG 1080x1080]
-                        </div>
-                        <img src="AYCAP.PNG" alt="Global Youth Statement" class="w-full h-full object-cover relative z-10 group-hover:scale-110 transition-transform duration-500">
+                    <div class="bg-slate-100 aspect-square rounded-xl mb-4 overflow-hidden shadow-sm group-hover:shadow-xl transition-all border border-slate-200">
+                        <img src="aycap.PNG" alt="Global Youth Statement" class="object-cover w-full h-full group-hover:scale-105 transition-transform">
                     </div>
                     <h3 class="font-bold text-lg">Global Youth Statement</h3>
-                    <p class="text-sm text-slate-500 font-medium italic">UNFCCC • Data Viz</p>
+                    <p class="text-sm text-slate-500 font-medium italic">UNFCCC • Data Visualization</p>
                 </div>
 
-                <!-- Project 3 -->
+                <!-- Design Job 3 -->
                 <div class="group">
-                    <div class="square-container bg-slate-100 rounded-xl mb-4 shadow-sm border border-slate-200 relative">
-                        <div class="absolute inset-0 flex items-center justify-center text-slate-400 text-xs p-4 text-center opacity-50">
-                            [PIGD.PNG 1080x1080]
-                        </div>
-                        <img src="PIGD.PNG" alt="PIGD Identity" class="w-full h-full object-cover relative z-10 group-hover:scale-110 transition-transform duration-500">
+                    <div class="bg-slate-100 aspect-square rounded-xl mb-4 overflow-hidden shadow-sm group-hover:shadow-xl transition-all border border-slate-200">
+                        <img src="pigd.PNG" alt="PIGD Identity" class="object-cover w-full h-full group-hover:scale-105 transition-transform">
                     </div>
                     <h3 class="font-bold text-lg">PIGD Identity</h3>
-                    <p class="text-sm text-slate-500 font-medium italic">Brand Strategy</p>
+                    <p class="text-sm text-slate-500 font-medium italic">Brand Strategy • Green Development</p>
                 </div>
             </div>
         </div>
@@ -106,33 +93,46 @@
     <section id="experience" class="py-20 bg-slate-50">
         <div class="max-w-4xl mx-auto px-6">
             <h2 class="text-3xl font-bold mb-16 text-center underline decoration-green-500 underline-offset-8">Professional Journey</h2>
+            
             <div class="space-y-12 border-l-2 border-slate-200 ml-4 md:ml-0 pl-8">
                 <!-- Role 1 -->
                 <div class="relative">
-                    <div class="absolute -left-[41px] top-1 bg-green-600 w-4 h-4 rounded-full border-4 border-white shadow"></div>
+                    <div class="absolute -left-[41px] top-1 bg-green-600 w-4 h-4 rounded-full border-4 border-white"></div>
                     <div class="flex flex-col md:flex-row md:justify-between mb-1">
                         <h3 class="text-xl font-bold">National Coordinator</h3>
                         <span class="text-green-700 font-bold bg-green-50 px-3 py-1 rounded text-sm">2024 - Present</span>
                     </div>
                     <p class="text-slate-700 font-medium italic">African Youth Initiative on Climate Change - Nigeria</p>
                 </div>
+
                 <!-- Role 2 -->
                 <div class="relative">
-                    <div class="absolute -left-[41px] top-1 bg-slate-400 w-4 h-4 rounded-full border-4 border-white shadow"></div>
+                    <div class="absolute -left-[41px] top-1 bg-slate-400 w-4 h-4 rounded-full border-4 border-white"></div>
                     <div class="flex flex-col md:flex-row md:justify-between mb-1">
-                        <h3 class="text-xl font-bold">Head of Operation</h3>
+                        <h3 class="text-xl font-bold">Head of Operations</h3>
                         <span class="text-slate-500 font-bold bg-slate-100 px-3 py-1 rounded text-sm">2021 - 2025</span>
                     </div>
-                    <p class="text-slate-700 font-medium italic">Prime Initiative for Green Development</p>
+                    <p class="text-slate-700 font-medium italic">Prime Initiative for Green Development (PIGD)</p>
                 </div>
+
                 <!-- Role 3 -->
                 <div class="relative">
-                    <div class="absolute -left-[41px] top-1 bg-slate-400 w-4 h-4 rounded-full border-4 border-white shadow"></div>
+                    <div class="absolute -left-[41px] top-1 bg-slate-400 w-4 h-4 rounded-full border-4 border-white"></div>
                     <div class="flex flex-col md:flex-row md:justify-between mb-1">
                         <h3 class="text-xl font-bold">Graphic Lead</h3>
                         <span class="text-slate-500 font-bold bg-slate-100 px-3 py-1 rounded text-sm">2023</span>
                     </div>
                     <p class="text-slate-700 font-medium italic">African Youth Mobilization for COP (AYM4COP)</p>
+                </div>
+
+                <!-- Role 4 -->
+                <div class="relative">
+                    <div class="absolute -left-[41px] top-1 bg-slate-400 w-4 h-4 rounded-full border-4 border-white"></div>
+                    <div class="flex flex-col md:flex-row md:justify-between mb-1">
+                        <h3 class="text-xl font-bold">Graphics Designer</h3>
+                        <span class="text-slate-500 font-bold bg-slate-100 px-3 py-1 rounded text-sm">2023 - Present</span>
+                    </div>
+                    <p class="text-slate-700 font-medium italic">ICCDI</p>
                 </div>
             </div>
         </div>
@@ -143,27 +143,35 @@
         <div class="max-w-6xl mx-auto px-6">
             <h2 class="text-3xl font-bold mb-12 text-center text-green-400">Conferences & Leadership</h2>
             <div class="grid md:grid-cols-2 gap-8">
-                <div class="bg-white/5 p-8 rounded-xl border border-white/10">
+                <div class="bg-white/5 p-6 rounded-xl border border-white/10">
                     <ul class="space-y-6">
                         <li>
-                            <p class="text-green-400 font-bold text-xs tracking-widest">LCOY NIGERIA 2025</p>
-                            <p class="text-xl font-semibold">Co-organizer</p>
+                            <p class="text-green-400 font-bold text-sm">LCOY NIGERIA 2025</p>
+                            <p class="text-lg font-semibold">Co-organizer</p>
                         </li>
                         <li>
-                            <p class="text-green-400 font-bold text-xs tracking-widest">COP29 (BAKU)</p>
-                            <p class="text-xl font-semibold">Delegate & Panelist</p>
+                            <p class="text-green-400 font-bold text-sm">COP29 (Baku)</p>
+                            <p class="text-lg font-semibold">Delegate & Panelist: AI for Renewable Energy</p>
+                        </li>
+                        <li>
+                            <p class="text-green-400 font-bold text-sm">COP28 (Dubai)</p>
+                            <p class="text-lg font-semibold">Loss & Damage Working Group (YOUNGO)</p>
                         </li>
                     </ul>
                 </div>
-                <div class="bg-white/5 p-8 rounded-xl border border-white/10">
+                <div class="bg-white/5 p-6 rounded-xl border border-white/10">
                     <ul class="space-y-6">
                         <li>
-                            <p class="text-green-400 font-bold text-xs tracking-widest">LCOY NIGERIA 2022</p>
-                            <p class="text-xl font-semibold">Graphic and Communication Lead</p>
+                            <p class="text-green-400 font-bold text-sm">LCOY NIGERIA 2024</p>
+                            <p class="text-lg font-semibold">Co-Organizer / Speaker</p>
                         </li>
                         <li>
-                            <p class="text-green-400 font-bold text-xs tracking-widest">RECOGNITION</p>
-                            <p class="text-xl font-semibold">Volunteer of the Year (2021)</p>
+                            <p class="text-green-400 font-bold text-sm">LCOY NIGERIA 2022</p>
+                            <p class="text-lg font-semibold">Graphic and Communication Lead</p>
+                        </li>
+                        <li>
+                            <p class="text-green-400 font-bold text-sm">RECOGNITION</p>
+                            <p class="text-lg font-semibold italic">Volunteer of the Year - Prime Initiative (2021)</p>
                         </li>
                     </ul>
                 </div>
@@ -173,12 +181,25 @@
 
     <!-- Footer -->
     <footer id="contact" class="py-16 text-center border-t bg-white">
+        <p class="text-xl font-bold mb-6 italic text-slate-800">Ready to collaborate on the next green initiative?</p>
+        
         <div class="flex justify-center gap-10 text-3xl mb-10">
-            <a href="mailto:amaibipatrick@gmail.com" class="text-slate-400 hover:text-red-500 transition" title="Email"><i class="fa-solid fa-envelope"></i></a>
-            <a href="https://www.linkedin.com/in/patrickamaibi/" target="_blank" class="text-slate-400 hover:text-blue-600 transition" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-            <a href="https://x.com/patrickamaibi" target="_blank" class="text-slate-400 hover:text-black transition" title="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+            <!-- Email -->
+            <a href="mailto:amaibipatrick@gmail.com" class="text-slate-400 hover:text-red-500 transition shadow-sm p-3 rounded-full hover:bg-slate-50" title="Email Me">
+                <i class="fa-solid fa-envelope"></i>
+            </a>
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/in/patrickamaibi/" target="_blank" class="text-slate-400 hover:text-blue-600 transition shadow-sm p-3 rounded-full hover:bg-slate-50" title="LinkedIn">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <!-- X / Twitter -->
+            <a href="https://x.com/patrickamaibi" target="_blank" class="text-slate-400 hover:text-black transition shadow-sm p-3 rounded-full hover:bg-slate-50" title="X (Twitter)">
+                <i class="fa-brands fa-x-twitter"></i>
+            </a>
         </div>
-        <p class="text-sm text-slate-400 tracking-widest uppercase font-bold">Patrick Amaibi &copy; 2024</p>
+        
+        <p class="text-sm text-slate-400 tracking-widest uppercase">Patrick Amaibi &copy; 2024</p>
+        <p class="text-xs text-slate-300 mt-2">Environmentalist | Graphic Designer | Climate Advocate</p>
     </footer>
 
     <script>
