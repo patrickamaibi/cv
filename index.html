@@ -8,11 +8,11 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
     <style>
         .scroll-smooth { scroll-behavior: smooth; }
-        /* This makes sure images look good even if they are different sizes */
-        .portfolio-img {
+        /* Ensures the container is a perfect square for 1080x1080 content */
+        .square-container {
+            aspect-ratio: 1 / 1;
             width: 100%;
-            height: 100%;
-            object-fit: cover;
+            overflow: hidden;
         }
     </style>
 </head>
@@ -28,8 +28,8 @@
                 <a href="#experience" class="hover:text-green-600 font-medium transition">Journey</a>
                 
                 <div class="flex items-center border-l pl-6 gap-4">
-                    <a href="https://x.com/patrickamaibi" target="_blank" class="text-slate-500 hover:text-black transition text-lg"><i class="fa-brands fa-x-twitter"></i></a>
-                    <a href="https://www.linkedin.com/in/patrickamaibi/" target="_blank" class="text-slate-500 hover:text-blue-600 transition text-lg"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://x.com/patrickamaibi" target="_blank" class="text-slate-500 hover:text-black transition text-xl"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://www.linkedin.com/in/patrickamaibi/" target="_blank" class="text-slate-500 hover:text-blue-600 transition text-xl"><i class="fab fa-linkedin"></i></a>
                     <a href="mailto:amaibipatrick@gmail.com" class="bg-green-700 text-white px-5 py-2 rounded-full text-sm font-bold hover:bg-green-800 transition shadow-sm">Email Me</a>
                 </div>
             </div>
@@ -43,7 +43,7 @@
         </h1>
         
         <div class="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-            <p id="about-text-preview">
+            <p id="about-text-preview" class="inline">
                 I am a tech-savvy environmental and climate justice advocate with a background in Environmental Engineering and strong experience in youth-led and community-driven initiatives...
             </p>
             <span id="about-text-full" class="hidden text-slate-600">
@@ -53,56 +53,56 @@
         </div>
     </header>
 
-    <!-- Design Portfolio Section -->
+    <!-- Design Portfolio Section (1080x1080 Squares) -->
     <section id="design" class="bg-white py-20">
         <div class="max-w-6xl mx-auto px-6">
             <div class="mb-12">
                 <h2 class="text-3xl font-bold text-slate-900 italic">Top Graphic Design Jobs</h2>
+                <p class="text-slate-500 mt-2 font-medium uppercase tracking-widest text-xs">Featured Creative Projects (1080x1080)</p>
                 <div class="h-1 w-20 bg-green-600 mt-2"></div>
             </div>
             
-            <div class="grid md:grid-cols-3 gap-10">
+            <div class="grid md:grid-cols-3 gap-8">
                 <!-- Project 1 -->
                 <div class="group">
-                    <div class="bg-slate-200 aspect-[4/5] rounded-xl mb-4 overflow-hidden shadow-sm border border-slate-200 relative">
-                        <!-- If the image exists, it shows. If not, the text behind it shows -->
-                        <div class="absolute inset-0 flex items-center justify-center text-slate-400 text-sm p-4 text-center">
-                            Image "CLIMATEJ.PNG" not found in folder
+                    <div class="square-container bg-slate-100 rounded-xl mb-4 shadow-sm border border-slate-200 relative">
+                        <div class="absolute inset-0 flex items-center justify-center text-slate-400 text-xs p-4 text-center opacity-50">
+                            [CLIMATEJ.PNG 1080x1080]
                         </div>
-                        <img src="CLIMATEJ.PNG" alt="Climate Justice Campaign" class="portfolio-img relative z-10 group-hover:scale-105 transition-transform">
+                        <img src="CLIMATEJ.PNG" alt="Climate Justice Campaign" class="w-full h-full object-cover relative z-10 group-hover:scale-110 transition-transform duration-500">
                     </div>
                     <h3 class="font-bold text-lg">Climate Justice Campaign</h3>
-                    <p class="text-sm text-slate-500 font-medium italic">Environmental Advocacy • Digital Media</p>
+                    <p class="text-sm text-slate-500 font-medium italic">Environmental Advocacy</p>
                 </div>
 
                 <!-- Project 2 -->
                 <div class="group">
-                    <div class="bg-slate-200 aspect-[4/5] rounded-xl mb-4 overflow-hidden shadow-sm border border-slate-200 relative">
-                        <div class="absolute inset-0 flex items-center justify-center text-slate-400 text-sm p-4 text-center">
-                            Image "AYCAP.PNG" not found in folder
+                    <div class="square-container bg-slate-100 rounded-xl mb-4 shadow-sm border border-slate-200 relative">
+                        <div class="absolute inset-0 flex items-center justify-center text-slate-400 text-xs p-4 text-center opacity-50">
+                            [AYCAP.PNG 1080x1080]
                         </div>
-                        <img src="AYCAP.PNG" alt="Global Youth Statement" class="portfolio-img relative z-10 group-hover:scale-105 transition-transform">
+                        <img src="AYCAP.PNG" alt="Global Youth Statement" class="w-full h-full object-cover relative z-10 group-hover:scale-110 transition-transform duration-500">
                     </div>
                     <h3 class="font-bold text-lg">Global Youth Statement</h3>
-                    <p class="text-sm text-slate-500 font-medium italic">UNFCCC • Data Visualization</p>
+                    <p class="text-sm text-slate-500 font-medium italic">UNFCCC • Data Viz</p>
                 </div>
 
                 <!-- Project 3 -->
                 <div class="group">
-                    <div class="bg-slate-200 aspect-[4/5] rounded-xl mb-4 overflow-hidden shadow-sm border border-slate-200 relative">
-                        <div class="absolute inset-0 flex items-center justify-center text-slate-400 text-sm p-4 text-center">
-                            Image "PIGD.PNG" not found in folder
+                    <div class="square-container bg-slate-100 rounded-xl mb-4 shadow-sm border border-slate-200 relative">
+                        <div class="absolute inset-0 flex items-center justify-center text-slate-400 text-xs p-4 text-center opacity-50">
+                            [PIGD.PNG 1080x1080]
                         </div>
-                        <img src="PIGD.PNG" alt="PIGD Identity" class="portfolio-img relative z-10 group-hover:scale-105 transition-transform">
+                        <img src="PIGD.PNG" alt="PIGD Identity" class="w-full h-full object-cover relative z-10 group-hover:scale-110 transition-transform duration-500">
                     </div>
                     <h3 class="font-bold text-lg">PIGD Identity</h3>
-                    <p class="text-sm text-slate-500 font-medium italic">Brand Strategy • Green Development</p>
+                    <p class="text-sm text-slate-500 font-medium italic">Brand Strategy</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Professional Journey Section (Truncated for space, keeping your updates) -->
+    <!-- Professional Journey -->
     <section id="experience" class="py-20 bg-slate-50">
         <div class="max-w-4xl mx-auto px-6">
             <h2 class="text-3xl font-bold mb-16 text-center underline decoration-green-500 underline-offset-8">Professional Journey</h2>
@@ -120,10 +120,10 @@
                 <div class="relative">
                     <div class="absolute -left-[41px] top-1 bg-slate-400 w-4 h-4 rounded-full border-4 border-white shadow"></div>
                     <div class="flex flex-col md:flex-row md:justify-between mb-1">
-                        <h3 class="text-xl font-bold">Head of Operations</h3>
+                        <h3 class="text-xl font-bold">Head of Operation</h3>
                         <span class="text-slate-500 font-bold bg-slate-100 px-3 py-1 rounded text-sm">2021 - 2025</span>
                     </div>
-                    <p class="text-slate-700 font-medium italic">Prime Initiative for Green Development (PIGD)</p>
+                    <p class="text-slate-700 font-medium italic">Prime Initiative for Green Development</p>
                 </div>
                 <!-- Role 3 -->
                 <div class="relative">
@@ -138,14 +138,47 @@
         </div>
     </section>
 
+    <!-- Conferences & Leadership -->
+    <section class="bg-slate-900 text-white py-20">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-12 text-center text-green-400">Conferences & Leadership</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white/5 p-8 rounded-xl border border-white/10">
+                    <ul class="space-y-6">
+                        <li>
+                            <p class="text-green-400 font-bold text-xs tracking-widest">LCOY NIGERIA 2025</p>
+                            <p class="text-xl font-semibold">Co-organizer</p>
+                        </li>
+                        <li>
+                            <p class="text-green-400 font-bold text-xs tracking-widest">COP29 (BAKU)</p>
+                            <p class="text-xl font-semibold">Delegate & Panelist</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-white/5 p-8 rounded-xl border border-white/10">
+                    <ul class="space-y-6">
+                        <li>
+                            <p class="text-green-400 font-bold text-xs tracking-widest">LCOY NIGERIA 2022</p>
+                            <p class="text-xl font-semibold">Graphic and Communication Lead</p>
+                        </li>
+                        <li>
+                            <p class="text-green-400 font-bold text-xs tracking-widest">RECOGNITION</p>
+                            <p class="text-xl font-semibold">Volunteer of the Year (2021)</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer id="contact" class="py-16 text-center border-t bg-white">
         <div class="flex justify-center gap-10 text-3xl mb-10">
-            <a href="mailto:amaibipatrick@gmail.com" class="text-slate-400 hover:text-red-500 transition"><i class="fa-solid fa-envelope"></i></a>
-            <a href="https://www.linkedin.com/in/patrickamaibi/" target="_blank" class="text-slate-400 hover:text-blue-600 transition"><i class="fab fa-linkedin"></i></a>
-            <a href="https://x.com/patrickamaibi" target="_blank" class="text-slate-400 hover:text-black transition"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="mailto:amaibipatrick@gmail.com" class="text-slate-400 hover:text-red-500 transition" title="Email"><i class="fa-solid fa-envelope"></i></a>
+            <a href="https://www.linkedin.com/in/patrickamaibi/" target="_blank" class="text-slate-400 hover:text-blue-600 transition" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://x.com/patrickamaibi" target="_blank" class="text-slate-400 hover:text-black transition" title="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
         </div>
-        <p class="text-sm text-slate-400 tracking-widest uppercase">Patrick Amaibi &copy; 2024</p>
+        <p class="text-sm text-slate-400 tracking-widest uppercase font-bold">Patrick Amaibi &copy; 2024</p>
     </footer>
 
     <script>
